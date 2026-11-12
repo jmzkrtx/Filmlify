@@ -2328,3 +2328,125 @@ input:focus, select:focus, textarea:focus {
 }
 
 #bookEmpty[hidden] { display: none; }
+
+
+/* ===== HELP CENTER ===== */
+.help-hero {
+    text-align: center;
+    padding: 34px 20px 30px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2a3278, #1a2150);
+    border: 1px solid var(--line);
+}
+
+.help-hero h2 { border: 0; margin-bottom: 6px; }
+.help-hero p { color: var(--muted); margin-bottom: 18px; }
+
+.help-hero input {
+    width: 100%;
+    max-width: 520px;
+    padding: 13px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: #0f1534;
+    color: var(--text);
+    font-size: 15px;
+}
+
+.help-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.help-topic {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--text);
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.help-topic:hover { border-color: var(--accent); }
+.help-topic.active { background: #4750b0; border-color: var(--accent); }
+
+.faq {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq[hidden] { display: none; }
+
+.faq summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 15px 48px 15px 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+    content: "+";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: var(--accent);
+    transition: transform 0.2s;
+}
+
+.faq[open] summary::after { content: "−"; }
+.faq[open] { border-color: var(--accent); }
+
+.faq p {
+    padding: 0 18px 16px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.help-empty {
+    text-align: center;
+    color: var(--muted);
+    padding: 24px 0;
+}
+
+.help-contact {
+    margin-top: 26px;
+    text-align: center;
+    padding: 26px 20px;
+}
+
+.help-contact h3 { margin-bottom: 6px; }
+.help-contact p { color: var(--muted); }
+
+.help-contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 16px 0 14px;
+}
+
+.help-legal { font-size: 13px; }
+.help-legal a { color: var(--accent); }
+.help-legal a:hover { text-decoration: underline; }
+
+@media (max-width: 700px) {
+    .help-hero { padding: 24px 16px; }
+    .help-topics { gap: 8px; }
+    .help-topic { padding: 8px 12px; font-size: 13px; }
+}
