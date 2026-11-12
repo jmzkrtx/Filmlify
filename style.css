@@ -2259,3 +2259,13 @@ input:focus, select:focus, textarea:focus {
 .hero[data-title="The Shawshank Redemption"] {
     background-position: center 12% !important;
 }
+
+
+/* ===== TV SLIDESHOW: keep heads in view ===== */
+/* same crop problem as the home banner: anchor toward the top instead of dead center */
+.slideshow .hero {
+    background-position: center 18% !important;
+}
+
+/* per-show tweaks (smaller % = shows more of the top, bigger % = more of the bottom) */
+.slideshow .hero[data-title="Breaking Bad"] { background-position: center 8% !important; }
