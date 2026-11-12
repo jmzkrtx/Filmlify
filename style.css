@@ -2269,3 +2269,62 @@ input:focus, select:focus, textarea:focus {
 
 /* per-show tweaks (smaller % = shows more of the top, bigger % = more of the bottom) */
 .slideshow .hero[data-title="Breaking Bad"] { background-position: center 8% !important; }
+
+
+/* ===== IN THEATER: Book Now buttons all line up ===== */
+/* cards in the Now Showing row become columns of equal height; the button sticks to the bottom,
+   so it lines up even when a title wraps onto two lines */
+#theater .row[data-source="/movie/now_playing"] .card {
+    display: flex;
+    flex-direction: column;
+}
+
+#theater .row[data-source="/movie/now_playing"] .card .poster { flex: none; }
+
+#theater .row[data-source="/movie/now_playing"] .card small {
+    display: block;
+    margin-bottom: 12px;
+}
+
+#theater .book-btn {
+    margin-top: auto;
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== IN THEATER: booking panel ===== */
+/* don't stretch the panel to the full page height while it is empty */
+#bookPanel {
+    align-self: start;
+}
+
+#bookEmpty {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 28px 24px;
+    line-height: 1.5;
+    color: #c9cffc;
+}
+
+#bookEmpty::before {
+    content: "🎟️";
+    font-size: 44px;
+    margin-bottom: 6px;
+}
+
+#bookEmpty::after {
+    content: "Pick a poster, then choose your cinema, date, time and seats.";
+    font-size: 13px;
+    opacity: 0.7;
+    max-width: 280px;
+}
+
+#bookEmpty[hidden] { display: none; }
