@@ -504,6 +504,51 @@
   </div></section>
 </div>
 
+<!-- ===================== HELP CENTER ===================== -->
+<div class="page" id="help">
+  <section class="block">
+    <div class="help-hero">
+      <h2>Help Center</h2>
+      <p>How can we help you? Search the questions below or pick a topic.</p>
+      <input type="text" id="helpSearch" placeholder="Search help, e.g. watchlist, booking, review..." autocomplete="off">
+    </div>
+
+    <div class="help-topics" id="helpTopics">
+      <button type="button" class="help-topic active" data-topic="all"><span>📚</span>All</button>
+      <button type="button" class="help-topic" data-topic="Getting started"><span>🚀</span>Getting started</button><button type="button" class="help-topic" data-topic="Browsing"><span>🔎</span>Browsing</button><button type="button" class="help-topic" data-topic="Your account"><span>👤</span>Your account</button><button type="button" class="help-topic" data-topic="In Theater"><span>🎟️</span>In Theater</button><button type="button" class="help-topic" data-topic="Problems"><span>🛠️</span>Problems</button>
+    </div>
+
+    <div class="help-faqs" id="helpFaqs">
+      <details class="faq" data-topic="Getting started"><summary>How do I create an account?</summary><p>Click <b>Login / Sign up</b> at the top right, choose Sign up, and fill in the form. Once you are logged in you can write reviews, keep a watchlist, make lists and edit your profile.</p></details>
+      <details class="faq" data-topic="Getting started"><summary>Do I need an account to use Filmlify?</summary><p>No. You can search, browse movies and TV shows and open their details without logging in. The Profile and People pages need an account.</p></details>
+      <details class="faq" data-topic="Getting started"><summary>How do I search for a movie, show or actor?</summary><p>Type in the search bar at the top of any page and press Enter. Results can include movies, TV shows and people.</p></details>
+      <details class="faq" data-topic="Browsing"><summary>How do I find something to watch?</summary><p>Open <b>Browse</b> and use the filters for type, genre, year, rating and sort order. Press <b>Load more</b> at the bottom to see more results.</p></details>
+      <details class="faq" data-topic="Browsing"><summary>Where do the movie and TV details come from?</summary><p>All titles, posters, ratings and descriptions come from TMDB. Filmlify uses the TMDB API but is not endorsed or certified by TMDB.</p></details>
+      <details class="faq" data-topic="Browsing"><summary>Why is a poster, rating or description missing?</summary><p>Some titles do not have complete information on TMDB yet. When a poster is missing, Filmlify shows a colored placeholder instead.</p></details>
+      <details class="faq" data-topic="Your account"><summary>How do I add a movie to my watchlist or a list?</summary><p>Open a movie or show and use the <b>Add to List</b> button. You can see and manage your lists on your Profile page.</p></details>
+      <details class="faq" data-topic="Your account"><summary>How do I write a review or rating?</summary><p>Open the movie or show you want to review, give it a star rating and write your opinion. Please keep reviews respectful and honest.</p></details>
+      <details class="faq" data-topic="Your account"><summary>How do I change my profile photo or details?</summary><p>Go to <b>Profile</b> and choose Edit Profile. You can change your photo and other details there.</p></details>
+      <details class="faq" data-topic="Your account"><summary>Why did my watchlist and reviews disappear?</summary><p>Right now your data is saved only in your own browser. Clearing your browser data, using a private window or switching to another device or browser will not show it. See the Privacy Policy for details.</p></details>
+      <details class="faq" data-topic="In Theater"><summary>How do I book tickets?</summary><p>Open <b>In Theater</b>, press <b>Book Now</b> under a movie in Now Showing, then follow the booking panel to choose your cinema, date, time and seats.</p></details>
+      <details class="faq" data-topic="In Theater"><summary>Which movies can I book?</summary><p>Only movies listed under Now Showing. The Coming Soon row shows upcoming movies that are not open for booking yet.</p></details>
+      <details class="faq" data-topic="Problems"><summary>The page is not loading movies. What should I do?</summary><p>Check your internet connection and turn off any ad blocker, since it may block TMDB. Then refresh the page. If TMDB is busy, wait a moment and try again.</p></details>
+      <details class="faq" data-topic="Problems"><summary>The page looks broken after an update.</summary><p>Your browser may be showing an old saved copy. Refresh with Ctrl+F5 (Cmd+Shift+R on Mac), or clear the site data and reload.</p></details>
+      <p class="help-empty" id="helpEmpty" hidden>No answers found. Try different words, or contact us below.</p>
+    </div>
+
+    <div class="box help-contact">
+      <h3>Still need help?</h3>
+      <p>Send us a message and we will get back to you as soon as we can.</p>
+      <div class="help-contact-links">
+        <a class="btn" href="mailto:brianmanzano528@gmail.com">✉️ Email us</a>
+        <a class="btn outline" href="https://www.facebook.com/brian.manzano.906/" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn outline" href="https://www.instagram.com/mxyzp.tlk528/?hl=en" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <p class="help-legal"><a href="#terms">Terms of Service</a> · <a href="#privacy">Privacy Policy</a></p>
+    </div>
+  </section>
+</div>
+
 <!-- ===================== LOGIN PAGE ===================== -->
 <div class="page" id="login">
   <div class="login">
@@ -547,7 +592,7 @@
   <div class="footer-inner">
     <div><div class="logo">🎞 Filmlify</div><p style="max-width:280px">Search top-rated blockbusters, trending releases, and hidden gems in seconds.</p></div>
     <div><b>Navigation</b><a href="#home">Home</a><a href="#movies">Movies</a><a href="#tv">TV Shows</a><a href="#theater">In Theater</a><a href="#profile">Profile</a></div>
-    <div><b>Support &amp; Legal</b><a href="#home">Help Center</a><a href="#terms">Terms of Service</a><a href="#privacy">Privacy Policy</a><a href="mailto:brianmanzano528@gmail.com">Contact Us</a></div>
+    <div><b>Support &amp; Legal</b><a href="#help">Help Center</a><a href="#terms">Terms of Service</a><a href="#privacy">Privacy Policy</a></div>
     <div><b>Contact With Us</b>
       <!-- EDIT YOUR CONTACT LINKS HERE -->
       <a href="https://www.facebook.com/brian.manzano.906/" target="_blank" rel="noopener">Facebook</a>
