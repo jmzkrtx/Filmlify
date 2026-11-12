@@ -3752,3 +3752,49 @@ async function loadMember(username) {
     if (token === memberToken) { nameEl.textContent = "Something went wrong"; bioEl.textContent = "Could not load this profile. Please try again."; reviewsBox.replaceChildren(); }
   }
 }
+
+
+/* ============ HELP CENTER: search + topic filter ============ */
+(function () {
+  var search = document.getElementById("helpSearch");
+  var topics = document.getElementById("helpTopics");
+  var faqs = Array.from(document.querySelectorAll("#helpFaqs .faq"));
+  var empty = document.getElementById("helpEmpty");
+  if (!search || !topics) { return; }
+
+  var topic = "all";
+
+  function filterHelp() {
+    var words = search.value.toLowerCase().split(/\s+/).filter(Boolean);
+    var shown = 0;
+    faqs.forEach(function (faq) {
+      var text = faq.textContent.toLowerCase();
+      var matchTopic = (topic === "all" || faq.dataset.topic === topic);
+      var matchWords = words.every(function (w) { return text.indexOf(w) !== -1; });
+      var show = matchTopic && matchWords;
+      faq.hidden = !show;
+      if (show) { shown++; }
+      if (words.length && show && shown === 1) { faq.open = true; }   // open the best match
+    });
+    empty.hidden = shown !== 0;
+  }
+
+  search.addEventListener("input", filterHelp);
+
+  topics.addEventListener("click", function (e) {
+    var btn = e.target.closest(".help-topic");
+    if (!btn) { return; }
+    topic = btn.dataset.topic;
+    topics.querySelectorAll(".help-topic").forEach(function (b) {
+      b.classList.toggle("active", b === btn);
+    });
+    filterHelp();
+  });
+
+  // opening one question closes the others
+  faqs.forEach(function (faq) {
+    faq.addEventListener("toggle", function () {
+      if (faq.open) { faqs.forEach(function (o) { if (o !== faq) { o.open = false; } }); }
+    });
+  });
+})();
