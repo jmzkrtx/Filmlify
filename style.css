@@ -2251,3 +2251,11 @@ input:focus, select:focus, textarea:focus {
 #loadMore[hidden] {
     display: none;
 }
+
+
+/* ===== HOME BANNER: keep the faces in view ===== */
+/* the banner is wide and short, so a centered background crops off the heads;
+   anchor it near the top instead */
+.hero[data-title="The Shawshank Redemption"] {
+    background-position: center 12% !important;
+}
